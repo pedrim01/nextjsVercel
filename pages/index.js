@@ -1,13 +1,21 @@
-export async function getStaticProps(context) {
+export async function getServerSideProps({ req, res }) {
+  res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
+  
+
   try {
-    const res = await fetch(
+    const response = await fetch(
       'https://greyhoundbet.racingpost.com/card/blocks.sd?race_id=1955873&r_date=2023-01-23&tab=form&blocks=card-header%2Ccard-pager%2Ccard-tabs%2Ccard-title%2Cform',
     )
-    const posts = await res.json()
-    /* res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate') */
+    const posts = await response.json()
+    const dynamicDate = new Date()
+    
+    const dateAgora = await dynamicDate.toGMTString()
+  
+
     return {
       props: {
         posts,
+        dateAgora,
       },
     }
   } catch (error) {
@@ -16,9 +24,10 @@ export async function getStaticProps(context) {
   }
 }
 
-export default function Todos({ posts }) {
+export default function Todos({ posts, dateAgora }) {
   return (
     <>
+      <h1>{dateAgora}</h1>
       <ul>
         {posts['form'].dogs.map((post) => (
           <li>{post.dogName}</li>
