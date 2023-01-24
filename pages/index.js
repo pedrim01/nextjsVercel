@@ -4,7 +4,7 @@ export async function getStaticProps(context) {
       'https://greyhoundbet.racingpost.com/card/blocks.sd?race_id=1955873&r_date=2023-01-23&tab=form&blocks=card-header%2Ccard-pager%2Ccard-tabs%2Ccard-title%2Cform',
     )
     const posts = await res.json()
-    res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
+    /* res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate') */
     return {
       props: {
         posts,
