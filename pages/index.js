@@ -4,7 +4,7 @@ export async function getServerSideProps({ req, res }) {
 
   try {
     const response = await fetch(
-      'https://greyhoundbet.racingpost.com/card/blocks.sd?race_id=1955873&r_date=2023-01-23&tab=form&blocks=card-header%2Ccard-pager%2Ccard-tabs%2Ccard-title%2Cform',
+      'https://greyhoundbet.racingpost.com/card/blocks.sd?race_id=1955654&r_date=2023-01-26&tab=form&blocks=card-header%2Ccard-pager%2Ccard-tabs%2Ccard-title%2Cform',
     )
     const posts = await response.json()
     const dynamicDate = new Date()
