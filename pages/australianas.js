@@ -12,7 +12,7 @@ export async function getServerSideProps({ req, res }) {
       
       const dateAgora = await dynamicDate.toGMTString()
     
-      console.log(post)
+      //console.log(post)
   
       return {
         props: {

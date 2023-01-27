@@ -1,0 +1,1781 @@
+<style>
+    .rescontent {
+        display: none;
+        margin-left: 10px;
+        border-left: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding-left: 7px;
+        background: #fff;
+    }
+</style>
+<script
+    type='text/javascript'> $.ajaxSetup({ cache: false }); var ajax_load = "<img class='loading' src='images/ajax-loader.gif' alt='loading...' />"; var loadUrl = "//www.trackinfo.com/inform/results.jsp"; function resSH(divName, aName, aText, araceid) { $("a").each(function () { if ($(this).text().indexOf('?') >= 0) { var text = $(this).text(); text = text.replace("?", "?"); $(this).text(text); } }); $('.rescontent').each(function (index) { if ($(this).attr("id") == divName) { $('#' + divName).html(ajax_load).load(loadUrl, "raceid=" + araceid); $('#' + divName).toggle('slow', function () { if ($('#' + divName).css('display') == 'none') { $('#' + aName).html(aText + ' &#9660'); } else { $('#' + aName).html(aText + ' &#9650'); } }); } else { $(this).hide(800); } }); }; </script>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>Racepages by Trackinfo.com</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: verdana;
+            margin-left: 0px;
+            margin-top: 0px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #d35a02;
+            text-decoration: none;
+            font-family: verdana;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .divcontent {
+            display: none;
+            margin-left: 1px;
+            border-left: 1px solid #333;
+            padding-left: 7px;
+        }
+
+        hr {
+            margin-top: 1px;
+            margin-bottom: 3px;
+            margin-left: 5px;
+            border: 0;
+            height: 1px;
+            background: #333;
+            background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+            background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+            background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+            background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+        }
+
+        .race-res .raceline {
+            font-size: 10px;
+        }
+
+        .race-res .racelineb {
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .race-res .racelines {
+            font-size: 10px;
+        }
+
+        .race-res .racelinebg {
+            font-size: 10px;
+            background: #F5F5F5;
+            font-weight: bold;
+            color: #5C5C5C;
+            height: 10px !important;
+        }
+    </style>
+    <script
+        type='text/javascript'> function divHALL() { $('.divcontent').each(function (index) { $(this).hide(300); }); }; function divSALL() { $('.divcontent').each(function (index) { $(this).show(200); }); }; function divSH(divName, aName, aText, arunnername) { //$("a").each(function() { // if ($(this).text().indexOf('?') >= 0) { // var text = $(this).text(); text = text.replace("?","?"); $(this).text(text); // } //}); $.ajaxSetup ({cache: false}); var ajax_load = "<img class='loading' src='images/spinner.gif' alt='loading...' />"; var loadUrl= "//www.trackinfo.com/files/racepagesraceid.jsp"; $('.divcontent').each(function(index) { if ($(this).attr("id") == divName) { // $('#'+divName).html(ajax_load).load(loadUrl, "runnername="+arunnername); $('#'+divName).toggle('slow',function(){ if ($('#'+divName).css('display') == 'none') { $('#'+aName).html(aText+' &#9660'); } else { $('#'+aName).html(aText+' &#9650'); }}); } else { //$(this).hide(800); } }); }; </script>
+    <script
+        type='text/javascript'> function divSHPerRace(divName, aName, aText) { $.ajaxSetup({ cache: false }); var ajax_load = "<img class='loading' src='images/spinner.gif' alt='loading...' />"; var loadUrl = "//www.trackinfo.com/files/racepagesraceid.jsp"; var visibleCount = 0; $('[id^=' + divName + ']').each(function () { var atId = this.id; if ($('#' + atId).is(':visible')) { visibleCount = visibleCount + 1; } }) $('[id^=' + divName + ']').each(function () { var atId = this.id; var atRunner = $('#' + atId).attr('name'); //alert(atId+' '+atRunner); if( visibleCount==1 ) {$('#'+atId).html(ajax_load).load(loadUrl, "runnername="+atRunner);$('#'+atId).show('slow');} if( visibleCount==0 ) {$('#'+atId).html(ajax_load).load(loadUrl, "runnername="+atRunner);$('#'+atId).toggle('slow');} if( visibleCount>=2 ) {$('#'+atId).hide('slow');} }) $('div').not('[id^='+divName+']').each(function(){ var notatId = this.id; $('#'+notatId).hide('slow'); }) }; </script>
+</head>
+
+<body>
+    <div style="width:910px;float:left;display:block;"> <span style="float:right; padding:0 15px;"> <a id="rl"
+                href="javascript:divHALL('show/hide all');" style="font-size:12px;">Hide All&#9660;</a> </span> <span
+            style="float:right; padding:0 15px;"> <a id="rl" href="javascript:divSALL('show/hide all');"
+                style="font-size:12px;">Show All&#9660;</a> </span> <br /> <b>1ST RACE Caliente - January 27, 2023 E
+            Grade: E, Distance: 546</b> <br /><span style="font-size:12px;"> 1st Half Daily
+            Double/Quiniela/Exacta/Trifecta/Straight Bet&nbsp;&nbsp;&nbsp;Bienvenidos Al Canodromo Caliente</span>
+        <div
+            style="margin-top:5px;margin-left:5px;padding:1px 1px 0 0;background-image: linear-gradient(to top, #F5F5F5 0%, #3B3535 900%);">
+            <img src="images/num-g1.png" alt="bet number 1"
+                style="border:1px solid black;width:24px;vertical-align: middle;" /> <span
+                style="width:200px;display:inline-block;"><b>Mega Newcombe </b>&nbsp;</span> <span
+                style="width:20px;font-size:12px;color:#494949;">&nbsp;</span> <span
+                style="font-size:12px;color:#494949;">LA FIESTA</span> <span style="float:right; padding:0 15px;"> <a
+                    id="rl011" href="javascript:divSH('divRaceL011','rl011','Details','Mega Newcombe');"
+                    style="font-size:12px;">Details&#9660;</a> </span> </div>
+        <hr>
+        <div class="divcontent" id="divRaceL011" name="Mega Newcombe" style="display:hidden;">
+            <div style="margin:4px 1px 4px 0px;"> <span style="font-size:12px;line-height:18px;"> (75) Best Win: 32.85
+                    Starts: CA 9 0 0 0 0 &nbsp;&nbsp; Kennel: LA FIESTA Trainer: BOBBY MIR<br /> BK. M, Sep 21,
+                    2018.&nbsp;&nbsp; Sire: IRUSKA ALL STAR&nbsp;&nbsp; Dam: VOLANDO NANCY<br /> </span> </div>
+            <table class="race-res" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="racelinebg">Event</td>
+                    <td class="racelinebg">Trk</td>
+                    <td class="racelinebg">Dist</td>
+                    <td class="racelinebg">TC</td>
+                    <td class="racelinebg">Rtime</td>
+                    <td class="racelinebg">Wt</td>
+                    <td class="racelinebg" nowrap>PP&nbsp;</td>
+                    <td class="racelinebg" nowrap>B</td>
+                    <td class="racelinebg" nowrap>E</td>
+                    <td class="racelinebg" nowrap></td>
+                    <td class="racelinebg" nowrap>Str</td>
+                    <td class="racelinebg" nowrap>&nbsp;</td>
+                    <td class="racelinebg" nowrap>Fin</td>
+                    <td class="racelinebg" nowrap>-mar</td>
+                    <td class="racelinebg" nowrap>Time&nbsp;</td>
+                    <td class="racelinebg">Odds</td>
+                    <td class="racelinebg" nowrap>Grd</td>
+                    <td class="racelinebg" nowrap>Comment</td>
+                    <td class="racelinebg" colspan=3>Leaaders</td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc11" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC11','vc11','01-24&nbsp;E&nbsp;2','gCA$20230124E02');">
+                            01-24&nbsp;E&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.52&nbsp;</td>
+                    <td class="raceline">74&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>7</td>
+                    <td class="raceline" nowrap>-26&nbsp;</td>
+                    <td class="racelineb" nowrap>33.33&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>14.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Early Speed, Gave&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Jb Donna Dogface&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Crazy Cobra&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Arroyo Vawn&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC11" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc12" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC12','vc12','01-22&nbsp;E&nbsp;1','gCA$20230122E01');">
+                            01-22&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.65&nbsp;</td>
+                    <td class="raceline">75&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-23.5&nbsp;</td>
+                    <td class="racelineb" nowrap>33.30&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>10.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Quick Start, Faded&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Final Mission&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Rocky Rhonda&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Fiesta Cersei&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC12" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc13" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC13','vc13','01-20&nbsp;E&nbsp;1','gCA$20230120E01');">
+                            01-20&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">30.81&nbsp;</td>
+                    <td class="raceline">74&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>7</td>
+                    <td class="raceline" nowrap>-33&nbsp;</td>
+                    <td class="racelineb" nowrap>33.13&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>35.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>SE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not A Factor, Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ajn Lil Sister&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Miss Movin On&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Fiesta Cersei&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC13" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc14" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC14','vc14','01-17&nbsp;A&nbsp;3','gCA$20230117A03');">
+                            01-17&nbsp;A&nbsp;3&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.53&nbsp;</td>
+                    <td class="raceline">75&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>7</td>
+                    <td class="raceline" nowrap>-26.5&nbsp;</td>
+                    <td class="racelineb" nowrap>33.37&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>6.40&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not Prominent, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bustamove&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Fiesta Cersei&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Manolo&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC14" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc15" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC15','vc15','01-15&nbsp;A&nbsp;2','gCA$20230115A02');">
+                            01-15&nbsp;A&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.44&nbsp;</td>
+                    <td class="raceline">75&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-28&nbsp;</td>
+                    <td class="racelineb" nowrap>33.39&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>5.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Early Speed, Faded&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Hercules&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ce's True Lee&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Sweet To Taste&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC15" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc16" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC16','vc16','01-13&nbsp;E&nbsp;1','gCA$20230113E01');">
+                            01-13&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.83&nbsp;</td>
+                    <td class="raceline">74&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>7</td>
+                    <td class="raceline" nowrap>-32&nbsp;</td>
+                    <td class="racelineb" nowrap>34.06&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>17.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>SE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gave All On Stretch&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Yolo Vaughn&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Tv's Panamanian&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Goodbadugly&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC16" style="display:none;"></div>
+                    </td>
+                </tr>
+            </table> <span style="font-size:10px"><b>HEAD TO HEAD:</b></span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-24&dogname1=Slatex Myrrah&dogname2=Mega Newcombe"
+                    target="gCA$20230124E02Mega Newcombe"><b>#2</b> Slatex Myrrah <b>Jan-24;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-22&dogname1=Rocky Rhonda&dogname2=Mega Newcombe"
+                    target="gCA$20230124E02Mega Newcombe"><b>#4</b> Rocky Rhonda <b>Jan-22;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-03&dogname1=Bgr Atomicblonde&dogname2=Mega Newcombe"
+                    target="gCA$20230124E02Mega Newcombe"><b>#7</b> Bgr Atomicblonde <b>Jan-03;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-03&dogname1=Gonz Milano&dogname2=Mega Newcombe"
+                    target="gCA$20230124E02Mega Newcombe"><b>#3</b> Gonz Milano <b>Jan-03;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2022-12-31&dogname1=Ww Top Secret&dogname2=Mega Newcombe"
+                    target="gCA$20230124E02Mega Newcombe"><b>#5</b> Ww Top Secret <b>Dec-31;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2022-12-27&dogname1=Ww Top Secret&dogname2=Mega Newcombe"
+                    target="gCA$20230124E02Mega Newcombe"><b>#5</b> Ww Top Secret <b>Dec-27;</b></a>&nbsp; </span>
+            <iframe src="entries-comp-hth.jsp" width="840" height="30" name="gCA$20230124E02Mega Newcombe"
+                id="gCA$20230124E02Mega Newcombe" marginheight="0" marginwidth="0" frameborder="0"
+                scrolling="no"></iframe>
+        </div>
+        <div
+            style="margin-top:5px;margin-left:5px;padding:1px 1px 0 0;background-image: linear-gradient(to top, #F5F5F5 0%, #3B3535 900%);">
+            <img src="images/num-g2.png" alt="bet number 2"
+                style="border:1px solid black;width:24px;vertical-align: middle;" /> <span
+                style="width:200px;display:inline-block;"><b>Slatex Myrrah </b>&nbsp;</span> <span
+                style="width:20px;font-size:12px;color:#494949;">&nbsp;</span> <span
+                style="font-size:12px;color:#494949;">RIO GRANDE</span> <span style="float:right; padding:0 15px;"> <a
+                    id="rl012" href="javascript:divSH('divRaceL012','rl012','Details','Slatex Myrrah');"
+                    style="font-size:12px;">Details&#9660;</a> </span> </div>
+        <hr>
+        <div class="divcontent" id="divRaceL012" name="Slatex Myrrah" style="display:hidden;">
+            <div style="margin:4px 1px 4px 0px;"> <span style="font-size:12px;line-height:18px;"> (71) Best Win: 31.52
+                    Starts: CA 10 0 0 2 1 &nbsp;&nbsp; Kennel: RIO GRANDE Trainer: MARCOS GONZALEZ<br /> DK.BD. F, Feb
+                    8, 2018.&nbsp;&nbsp; Sire: KIOWA MYTH&nbsp;&nbsp; Dam: SLATEX ANGELFIRE<br /> </span> </div>
+            <table class="race-res" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="racelinebg">Event</td>
+                    <td class="racelinebg">Trk</td>
+                    <td class="racelinebg">Dist</td>
+                    <td class="racelinebg">TC</td>
+                    <td class="racelinebg">Rtime</td>
+                    <td class="racelinebg">Wt</td>
+                    <td class="racelinebg" nowrap>PP&nbsp;</td>
+                    <td class="racelinebg" nowrap>B</td>
+                    <td class="racelinebg" nowrap>E</td>
+                    <td class="racelinebg" nowrap></td>
+                    <td class="racelinebg" nowrap>Str</td>
+                    <td class="racelinebg" nowrap>&nbsp;</td>
+                    <td class="racelinebg" nowrap>Fin</td>
+                    <td class="racelinebg" nowrap>-mar</td>
+                    <td class="racelinebg" nowrap>Time&nbsp;</td>
+                    <td class="racelinebg">Odds</td>
+                    <td class="racelinebg" nowrap>Grd</td>
+                    <td class="racelinebg" nowrap>Comment</td>
+                    <td class="racelinebg" colspan=3>Leaaders</td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc21" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC21','vc21','01-24&nbsp;E&nbsp;2','gCA$20230124E02');">
+                            01-24&nbsp;E&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.52&nbsp;</td>
+                    <td class="raceline">70&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>4</td>
+                    <td class="raceline" nowrap>-10.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.26&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>6.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Drove Late, Midtrack&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Jb Donna Dogface&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Crazy Cobra&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Arroyo Vawn&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC21" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc22" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC22','vc22','01-22&nbsp;A&nbsp;2','gCA$20230122A02');">
+                            01-22&nbsp;A&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.93&nbsp;</td>
+                    <td class="raceline">71&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-9.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.61&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>3.50&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>SE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not Promient, Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Shipsngiggles&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Good As Gold&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Slatex Kelce&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC22" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc23" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC23','vc23','01-20&nbsp;E&nbsp;3','gCA$20230120E03');">
+                            01-20&nbsp;E&nbsp;3&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.19&nbsp;</td>
+                    <td class="raceline">71&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-9.5&nbsp;</td>
+                    <td class="racelineb" nowrap>31.84&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>7.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Early Speed, Faded&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ajn Lil Noonie&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Jb Donna Dogface&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Play It Again&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC23" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc24" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC24','vc24','01-17&nbsp;E&nbsp;1','gCA$20230117E01');">
+                            01-17&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.81&nbsp;</td>
+                    <td class="raceline">71&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>3</td>
+                    <td class="raceline" nowrap>-2.5&nbsp;</td>
+                    <td class="racelineb" nowrap>31.99&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>1.80&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Hard Race To Show&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Socal Red Robin&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Of All Time&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Fiesta Petyr&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC24" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc25" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC25','vc25','01-14&nbsp;E&nbsp;3','gCA$20230114E03');">
+                            01-14&nbsp;E&nbsp;3&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">32.21&nbsp;</td>
+                    <td class="raceline">71&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>7</td>
+                    <td class="raceline" nowrap>-13&nbsp;</td>
+                    <td class="racelineb" nowrap>33.13&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>14.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>D&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Never In It, Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Socal Moana&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Epona&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Machali&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC25" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc26" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC26','vc26','01-11&nbsp;E&nbsp;6','gCA$20230111E06');">
+                            01-11&nbsp;E&nbsp;6&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.40&nbsp;</td>
+                    <td class="raceline">71&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-13.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.36&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>9.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>D&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not Prominent, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Yolo Isabella&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Play It Again&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Adrenaline&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC26" style="display:none;"></div>
+                    </td>
+                </tr>
+            </table> <span style="font-size:10px"><b>HEAD TO HEAD:</b></span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-24&dogname1=Mega Newcombe&dogname2=Slatex Myrrah"
+                    target="gCA$20230124E02Slatex Myrrah"><b>#1</b> Mega Newcombe <b>Jan-24;</b></a>&nbsp; </span>
+            <iframe src="entries-comp-hth.jsp" width="840" height="30" name="gCA$20230124E02Slatex Myrrah"
+                id="gCA$20230124E02Slatex Myrrah" marginheight="0" marginwidth="0" frameborder="0"
+                scrolling="no"></iframe>
+        </div>
+        <div
+            style="margin-top:5px;margin-left:5px;padding:1px 1px 0 0;background-image: linear-gradient(to top, #F5F5F5 0%, #3B3535 900%);">
+            <img src="images/num-g3.png" alt="bet number 3"
+                style="border:1px solid black;width:24px;vertical-align: middle;" /> <span
+                style="width:200px;display:inline-block;"><b>Gonz Milano </b>&nbsp;</span> <span
+                style="width:20px;font-size:12px;color:#494949;">&nbsp;</span> <span
+                style="font-size:12px;color:#494949;">RIO GRANDE</span> <span style="float:right; padding:0 15px;"> <a
+                    id="rl013" href="javascript:divSH('divRaceL013','rl013','Details','Gonz Milano');"
+                    style="font-size:12px;">Details&#9660;</a> </span> </div>
+        <hr>
+        <div class="divcontent" id="divRaceL013" name="Gonz Milano" style="display:hidden;">
+            <div style="margin:4px 1px 4px 0px;"> <span style="font-size:12px;line-height:18px;"> (63) Best Win: 31.36
+                    Starts: CA 9 0 1 3 2 &nbsp;&nbsp; Kennel: RIO GRANDE Trainer: MARCOS GONZALEZ<br /> R.F. M, Aug 15,
+                    2021.&nbsp;&nbsp; Sire: GONZ PANCHO&nbsp;&nbsp; Dam: JEDI HONEY RYDER<br /> </span> </div>
+            <table class="race-res" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="racelinebg">Event</td>
+                    <td class="racelinebg">Trk</td>
+                    <td class="racelinebg">Dist</td>
+                    <td class="racelinebg">TC</td>
+                    <td class="racelinebg">Rtime</td>
+                    <td class="racelinebg">Wt</td>
+                    <td class="racelinebg" nowrap>PP&nbsp;</td>
+                    <td class="racelinebg" nowrap>B</td>
+                    <td class="racelinebg" nowrap>E</td>
+                    <td class="racelinebg" nowrap></td>
+                    <td class="racelinebg" nowrap>Str</td>
+                    <td class="racelinebg" nowrap>&nbsp;</td>
+                    <td class="racelinebg" nowrap>Fin</td>
+                    <td class="racelinebg" nowrap>-mar</td>
+                    <td class="racelinebg" nowrap>Time&nbsp;</td>
+                    <td class="racelinebg">Odds</td>
+                    <td class="racelinebg" nowrap>Grd</td>
+                    <td class="racelinebg" nowrap>Comment</td>
+                    <td class="racelinebg" colspan=3>Leaaders</td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc31" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC31','vc31','01-24&nbsp;A&nbsp;1','gCA$20230124A01');">
+                            01-24&nbsp;A&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.17&nbsp;</td>
+                    <td class="raceline">64&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>4</td>
+                    <td class="raceline" nowrap>-19.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.52&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>14.40&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Good Race, Midtrack&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Dancin Contella&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Alicante&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Good As Gold&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC31" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc32" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC32','vc32','01-21&nbsp;E&nbsp;2','gCA$20230121E02');">
+                            01-21&nbsp;E&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.99&nbsp;</td>
+                    <td class="raceline">64&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>3</td>
+                    <td class="raceline" nowrap>-3&nbsp;</td>
+                    <td class="racelineb" nowrap>32.20&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>3.70&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>SE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Hard Race To Show&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Manolo&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Mega Offset&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ansley&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC32" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc33" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC33','vc33','01-19&nbsp;E&nbsp;2','gCA$20230119E02');">
+                            01-19&nbsp;E&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">32.22&nbsp;</td>
+                    <td class="raceline">62&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>5</td>
+                    <td class="raceline" nowrap>-9.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.89&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>4.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Same Pace, Outside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Mega Navarro&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ansley&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Manolo&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC33" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc34" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC34','vc34','01-16&nbsp;E&nbsp;2','gCA$20230116E02');">
+                            01-16&nbsp;E&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">30.88&nbsp;</td>
+                    <td class="raceline">62&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-17.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.10&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>5.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not A Factor, Mdtk&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Rico's Aries&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Just Wiggle It&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Adrenaline&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC34" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc35" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC35','vc35','01-14&nbsp;A&nbsp;2','gCA$20230114A02');">
+                            01-14&nbsp;A&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.39&nbsp;</td>
+                    <td class="raceline">63&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>5</td>
+                    <td class="raceline" nowrap>-15.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.49&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>3.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Varied, Outside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Walk The Moon&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>No Evidence&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bella Sunshine&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC35" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc36" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC36','vc36','01-12&nbsp;E&nbsp;1','gCA$20230112E01');">
+                            01-12&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.08&nbsp;</td>
+                    <td class="raceline">62&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>4</td>
+                    <td class="raceline" nowrap>-15.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.15&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>3.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gained Some, Outside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Rico's Aries&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bare Bones&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Slatex Kelce&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC36" style="display:none;"></div>
+                    </td>
+                </tr>
+            </table> <span style="font-size:10px"><b>HEAD TO HEAD:</b></span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-24&dogname1=Ww Top Secret&dogname2=Gonz Milano"
+                    target="gCA$20230124A01Gonz Milano"><b>#5</b> Ww Top Secret <b>Jan-24;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-21&dogname1=Bgr Atomicblonde&dogname2=Gonz Milano"
+                    target="gCA$20230124A01Gonz Milano"><b>#7</b> Bgr Atomicblonde <b>Jan-21;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-19&dogname1=Bgr Atomicblonde&dogname2=Gonz Milano"
+                    target="gCA$20230124A01Gonz Milano"><b>#7</b> Bgr Atomicblonde <b>Jan-19;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-14&dogname1=Bare Bones&dogname2=Gonz Milano"
+                    target="gCA$20230124A01Gonz Milano"><b>#6</b> Bare Bones <b>Jan-14;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-12&dogname1=Bare Bones&dogname2=Gonz Milano"
+                    target="gCA$20230124A01Gonz Milano"><b>#6</b> Bare Bones <b>Jan-12;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-10&dogname1=Bare Bones&dogname2=Gonz Milano"
+                    target="gCA$20230124A01Gonz Milano"><b>#6</b> Bare Bones <b>Jan-10;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-07&dogname1=Bgr Atomicblonde&dogname2=Gonz Milano"
+                    target="gCA$20230124A01Gonz Milano"><b>#7</b> Bgr Atomicblonde <b>Jan-07;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-03&dogname1=Bgr Atomicblonde&dogname2=Gonz Milano"
+                    target="gCA$20230124A01Gonz Milano"><b>#7</b> Bgr Atomicblonde <b>Jan-03;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-03&dogname1=Mega Newcombe&dogname2=Gonz Milano"
+                    target="gCA$20230124A01Gonz Milano"><b>#1</b> Mega Newcombe <b>Jan-03;</b></a>&nbsp; </span> <iframe
+                src="entries-comp-hth.jsp" width="840" height="30" name="gCA$20230124A01Gonz Milano"
+                id="gCA$20230124A01Gonz Milano" marginheight="0" marginwidth="0" frameborder="0"
+                scrolling="no"></iframe>
+        </div>
+        <div
+            style="margin-top:5px;margin-left:5px;padding:1px 1px 0 0;background-image: linear-gradient(to top, #F5F5F5 0%, #3B3535 900%);">
+            <img src="images/num-g4.png" alt="bet number 4"
+                style="border:1px solid black;width:24px;vertical-align: middle;" /> <span
+                style="width:200px;display:inline-block;"><b>Rocky Rhonda </b>&nbsp;</span> <span
+                style="width:20px;font-size:12px;color:#494949;">&nbsp;</span> <span
+                style="font-size:12px;color:#494949;">PURO ORO</span> <span style="float:right; padding:0 15px;"> <a
+                    id="rl014" href="javascript:divSH('divRaceL014','rl014','Details','Rocky Rhonda');"
+                    style="font-size:12px;">Details&#9660;</a> </span> </div>
+        <hr>
+        <div class="divcontent" id="divRaceL014" name="Rocky Rhonda" style="display:hidden;">
+            <div style="margin:4px 1px 4px 0px;"> <span style="font-size:12px;line-height:18px;"> (64) Best Win: 31.08
+                    Starts: CA 9 0 2 0 1 &nbsp;&nbsp; Kennel: PURO ORO Trainer: WALTER LAWSON<br /> BD. F, Oct 17,
+                    2018.&nbsp;&nbsp; Sire: ROCKSTEADY EDDIE&nbsp;&nbsp; Dam: RCK AZALEA<br /> </span> </div>
+            <table class="race-res" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="racelinebg">Event</td>
+                    <td class="racelinebg">Trk</td>
+                    <td class="racelinebg">Dist</td>
+                    <td class="racelinebg">TC</td>
+                    <td class="racelinebg">Rtime</td>
+                    <td class="racelinebg">Wt</td>
+                    <td class="racelinebg" nowrap>PP&nbsp;</td>
+                    <td class="racelinebg" nowrap>B</td>
+                    <td class="racelinebg" nowrap>E</td>
+                    <td class="racelinebg" nowrap></td>
+                    <td class="racelinebg" nowrap>Str</td>
+                    <td class="racelinebg" nowrap>&nbsp;</td>
+                    <td class="racelinebg" nowrap>Fin</td>
+                    <td class="racelinebg" nowrap>-mar</td>
+                    <td class="racelinebg" nowrap>Time&nbsp;</td>
+                    <td class="racelinebg">Odds</td>
+                    <td class="racelinebg" nowrap>Grd</td>
+                    <td class="racelinebg" nowrap>Comment</td>
+                    <td class="racelinebg" colspan=3>Leaaders</td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc41" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC41','vc41','01-24&nbsp;E&nbsp;1','gCA$20230124E01');">
+                            01-24&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.83&nbsp;</td>
+                    <td class="raceline">63&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>2</td>
+                    <td class="raceline" nowrap>-2.5&nbsp;</td>
+                    <td class="racelineb" nowrap>31.99&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>2.60&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>From Far Back To Plc&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Of All Time&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Olivia&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Fiesta Petyr&nbsp;(6)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC41" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc42" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC42','vc42','01-22&nbsp;E&nbsp;1','gCA$20230122E01');">
+                            01-22&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.65&nbsp;</td>
+                    <td class="raceline">64&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>2</td>
+                    <td class="raceline" nowrap>-2.5&nbsp;</td>
+                    <td class="racelineb" nowrap>31.82&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>3.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Secon Best To Place&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Final Mission&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Fiesta Cersei&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gunnin For Top&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC42" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc43" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC43','vc43','01-19&nbsp;E&nbsp;3','gCA$20230119E03');">
+                            01-19&nbsp;E&nbsp;3&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.36&nbsp;</td>
+                    <td class="raceline">64&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-8&nbsp;</td>
+                    <td class="racelineb" nowrap>31.91&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>21.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>D&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not A Factor, Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Taste Of Freedom&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bustamove&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Slatex Inferno&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC43" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc44" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC44','vc44','01-16&nbsp;E&nbsp;10','gCA$20230116E10');">
+                            01-16&nbsp;E&nbsp;10&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.19&nbsp;</td>
+                    <td class="raceline">64&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>4</td>
+                    <td class="raceline" nowrap>-8&nbsp;</td>
+                    <td class="racelineb" nowrap>31.74&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>14.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TD&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Good Race, Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Lk's Got Grit&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Pele&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Baby Bruce&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC44" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc45" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC45','vc45','01-14&nbsp;A&nbsp;3','gCA$20230114A03');">
+                            01-14&nbsp;A&nbsp;3&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">30.60&nbsp;</td>
+                    <td class="raceline">64&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>5</td>
+                    <td class="raceline" nowrap>-21.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.12&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>7.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>D&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gave On Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Amf Seldomcaught&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Arroyo Draya&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Sprite Rite&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC45" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc46" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC46','vc46','01-10&nbsp;E&nbsp;3','gCA$20230110E03');">
+                            01-10&nbsp;E&nbsp;3&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">30.89&nbsp;</td>
+                    <td class="raceline">64&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>5</td>
+                    <td class="raceline" nowrap>-11&nbsp;</td>
+                    <td class="racelineb" nowrap>31.66&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>8.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>D&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not Prominent, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Katalox Zion&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Arroyo Draya&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Machali&nbsp;(6)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC46" style="display:none;"></div>
+                    </td>
+                </tr>
+            </table> <span style="font-size:10px"><b>HEAD TO HEAD:</b></span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-24&dogname1=Bgr Atomicblonde&dogname2=Rocky Rhonda"
+                    target="gCA$20230124E01Rocky Rhonda"><b>#7</b> Bgr Atomicblonde <b>Jan-24;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-22&dogname1=Mega Newcombe&dogname2=Rocky Rhonda"
+                    target="gCA$20230124E01Rocky Rhonda"><b>#1</b> Mega Newcombe <b>Jan-22;</b></a>&nbsp; </span>
+            <iframe src="entries-comp-hth.jsp" width="840" height="30" name="gCA$20230124E01Rocky Rhonda"
+                id="gCA$20230124E01Rocky Rhonda" marginheight="0" marginwidth="0" frameborder="0"
+                scrolling="no"></iframe>
+        </div>
+        <div
+            style="margin-top:5px;margin-left:5px;padding:1px 1px 0 0;background-image: linear-gradient(to top, #F5F5F5 0%, #3B3535 900%);">
+            <img src="images/num-g5.png" alt="bet number 5"
+                style="border:1px solid black;width:24px;vertical-align: middle;" /> <span
+                style="width:200px;display:inline-block;"><b>Ww Top Secret </b>&nbsp;</span> <span
+                style="width:20px;font-size:12px;color:#494949;">&nbsp;</span> <span
+                style="font-size:12px;color:#494949;">TIJUANA</span> <span style="float:right; padding:0 15px;"> <a
+                    id="rl015" href="javascript:divSH('divRaceL015','rl015','Details','Ww Top Secret');"
+                    style="font-size:12px;">Details&#9660;</a> </span> </div>
+        <hr>
+        <div class="divcontent" id="divRaceL015" name="Ww Top Secret" style="display:hidden;">
+            <div style="margin:4px 1px 4px 0px;"> <span style="font-size:12px;line-height:18px;"> (60) Best Win: 31.21
+                    Starts: CA 9 0 1 2 1 &nbsp;&nbsp; Kennel: TIJUANA Trainer: CANDELARIO VILLANUEVA<br /> W.BD. F, Aug
+                    21, 2020.&nbsp;&nbsp; Sire: TOP OF THE PILE&nbsp;&nbsp; Dam: WW OFFTHE RECORD<br /> </span> </div>
+            <table class="race-res" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="racelinebg">Event</td>
+                    <td class="racelinebg">Trk</td>
+                    <td class="racelinebg">Dist</td>
+                    <td class="racelinebg">TC</td>
+                    <td class="racelinebg">Rtime</td>
+                    <td class="racelinebg">Wt</td>
+                    <td class="racelinebg" nowrap>PP&nbsp;</td>
+                    <td class="racelinebg" nowrap>B</td>
+                    <td class="racelinebg" nowrap>E</td>
+                    <td class="racelinebg" nowrap></td>
+                    <td class="racelinebg" nowrap>Str</td>
+                    <td class="racelinebg" nowrap>&nbsp;</td>
+                    <td class="racelinebg" nowrap>Fin</td>
+                    <td class="racelinebg" nowrap>-mar</td>
+                    <td class="racelinebg" nowrap>Time&nbsp;</td>
+                    <td class="racelinebg">Odds</td>
+                    <td class="racelinebg" nowrap>Grd</td>
+                    <td class="racelinebg" nowrap>Comment</td>
+                    <td class="racelinebg" colspan=3>Leaaders</td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc51" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC51','vc51','01-24&nbsp;A&nbsp;1','gCA$20230124A01');">
+                            01-24&nbsp;A&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.17&nbsp;</td>
+                    <td class="raceline">60&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>5</td>
+                    <td class="raceline" nowrap>-21&nbsp;</td>
+                    <td class="racelineb" nowrap>32.63&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>.80&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Same Pace, Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Dancin Contella&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Alicante&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Good As Gold&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC51" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc52" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC52','vc52','01-21&nbsp;E&nbsp;1','gCA$20230121E01');">
+                            01-21&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.36&nbsp;</td>
+                    <td class="raceline">59&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>3</td>
+                    <td class="raceline" nowrap>-12.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.22&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>2.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Closed Fast To Show&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Tv's Panamanian&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Goodbadugly&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Mustard&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC52" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc53" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC53','vc53','01-18&nbsp;E&nbsp;10','gCA$20230118E10');">
+                            01-18&nbsp;E&nbsp;10&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.21&nbsp;</td>
+                    <td class="raceline">60&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>5</td>
+                    <td class="raceline" nowrap>-7&nbsp;</td>
+                    <td class="racelineb" nowrap>31.69&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>8.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>D&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not A Factor, Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Mandel&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>No Evidence&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Icon Of Wealth&nbsp;(6)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC53" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc54" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC54','vc54','01-15&nbsp;E&nbsp;10','gCA$20230115E10');">
+                            01-15&nbsp;E&nbsp;10&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">M&nbsp;</td>
+                    <td class="racelineb">31.55&nbsp;</td>
+                    <td class="raceline">59&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>5</td>
+                    <td class="raceline" nowrap>-6.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.01&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>3.50&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>D&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not Prominent, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Johniewalker&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Dumpthedude&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Icon Of Wealth&nbsp;(6)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC54" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc55" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC55','vc55','01-13&nbsp;E&nbsp;3','gCA$20230113E03');">
+                            01-13&nbsp;E&nbsp;3&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.20&nbsp;</td>
+                    <td class="raceline">60&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-11&nbsp;</td>
+                    <td class="racelineb" nowrap>31.96&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>5.30&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>D&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>No Real Menace, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Chewing The Fat&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Arroyo Vawn&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Atx Cry Baby&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC55" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc56" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC56','vc56','01-10&nbsp;A&nbsp;10','gCA$20230110A10');">
+                            01-10&nbsp;A&nbsp;10&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">30.77&nbsp;</td>
+                    <td class="raceline">59&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>7</td>
+                    <td class="raceline" nowrap>-24.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.47&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>6.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>D&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not Prominent, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Amf Seldom Seen&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Walk The Moon&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Mistica&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC56" style="display:none;"></div>
+                    </td>
+                </tr>
+            </table> <span style="font-size:10px"><b>HEAD TO HEAD:</b></span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-24&dogname1=Gonz Milano&dogname2=Ww Top Secret"
+                    target="gCA$20230124A01Ww Top Secret"><b>#3</b> Gonz Milano <b>Jan-24;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-21&dogname1=Bare Bones&dogname2=Ww Top Secret"
+                    target="gCA$20230124A01Ww Top Secret"><b>#6</b> Bare Bones <b>Jan-21;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2022-12-31&dogname1=Mega Newcombe&dogname2=Ww Top Secret"
+                    target="gCA$20230124A01Ww Top Secret"><b>#1</b> Mega Newcombe <b>Dec-31;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2022-12-27&dogname1=Mega Newcombe&dogname2=Ww Top Secret"
+                    target="gCA$20230124A01Ww Top Secret"><b>#1</b> Mega Newcombe <b>Dec-27;</b></a>&nbsp; </span>
+            <iframe src="entries-comp-hth.jsp" width="840" height="30" name="gCA$20230124A01Ww Top Secret"
+                id="gCA$20230124A01Ww Top Secret" marginheight="0" marginwidth="0" frameborder="0"
+                scrolling="no"></iframe>
+        </div>
+        <div
+            style="margin-top:5px;margin-left:5px;padding:1px 1px 0 0;background-image: linear-gradient(to top, #F5F5F5 0%, #3B3535 900%);">
+            <img src="images/num-g6.png" alt="bet number 6"
+                style="border:1px solid black;width:24px;vertical-align: middle;" /> <span
+                style="width:200px;display:inline-block;"><b>Bare Bones </b>&nbsp;</span> <span
+                style="width:20px;font-size:12px;color:#494949;">&nbsp;</span> <span
+                style="font-size:12px;color:#494949;">NEWPORT</span> <span style="float:right; padding:0 15px;"> <a
+                    id="rl016" href="javascript:divSH('divRaceL016','rl016','Details','Bare Bones');"
+                    style="font-size:12px;">Details&#9660;</a> </span> </div>
+        <hr>
+        <div class="divcontent" id="divRaceL016" name="Bare Bones" style="display:hidden;">
+            <div style="margin:4px 1px 4px 0px;"> <span style="font-size:12px;line-height:18px;"> (65) Best Win: 31.55
+                    Starts: CA 8 0 1 1 2 &nbsp;&nbsp; Kennel: NEWPORT Trainer: TYLER SADULSKI<br /> R.W. F, Mar 7,
+                    2018.&nbsp;&nbsp; Sire: CHASMO'S DUTCH&nbsp;&nbsp; Dam: SE'S REAL MCCOY<br /> </span> </div>
+            <table class="race-res" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="racelinebg">Event</td>
+                    <td class="racelinebg">Trk</td>
+                    <td class="racelinebg">Dist</td>
+                    <td class="racelinebg">TC</td>
+                    <td class="racelinebg">Rtime</td>
+                    <td class="racelinebg">Wt</td>
+                    <td class="racelinebg" nowrap>PP&nbsp;</td>
+                    <td class="racelinebg" nowrap>B</td>
+                    <td class="racelinebg" nowrap>E</td>
+                    <td class="racelinebg" nowrap></td>
+                    <td class="racelinebg" nowrap>Str</td>
+                    <td class="racelinebg" nowrap>&nbsp;</td>
+                    <td class="racelinebg" nowrap>Fin</td>
+                    <td class="racelinebg" nowrap>-mar</td>
+                    <td class="racelinebg" nowrap>Time&nbsp;</td>
+                    <td class="racelinebg">Odds</td>
+                    <td class="racelinebg" nowrap>Grd</td>
+                    <td class="racelinebg" nowrap>Comment</td>
+                    <td class="racelinebg" colspan=3>Leaaders</td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc61" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC61','vc61','01-23&nbsp;E&nbsp;1','gCA$20230123E01');">
+                            01-23&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.84&nbsp;</td>
+                    <td class="raceline">65&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-11&nbsp;</td>
+                    <td class="racelineb" nowrap>32.62&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>6.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not Prominent, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Mega Offset&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Goodbadugly&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Capco&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC61" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc62" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC62','vc62','01-21&nbsp;E&nbsp;1','gCA$20230121E01');">
+                            01-21&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.36&nbsp;</td>
+                    <td class="raceline">65&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>5</td>
+                    <td class="raceline" nowrap>-13&nbsp;</td>
+                    <td class="racelineb" nowrap>32.28&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>3.70&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gave On Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Tv's Panamanian&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Goodbadugly&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Top Secret&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC62" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc63" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC63','vc63','01-18&nbsp;E&nbsp;1','gCA$20230118E01');">
+                            01-18&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.79&nbsp;</td>
+                    <td class="raceline">62&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>5</td>
+                    <td class="raceline" nowrap>-8.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.39&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>3.50&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Same Pace, Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Odin&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Tv's Panamanian&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Mustard&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC63" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc64" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC64','vc64','01-16&nbsp;E&nbsp;1','gCA$20230116E01');">
+                            01-16&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.23&nbsp;</td>
+                    <td class="raceline">65&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>3</td>
+                    <td class="raceline" nowrap>-15.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.30&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>2.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Up In Stretch Show&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Kl's Gray&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Mustard&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ww Capco&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC64" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc65" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC65','vc65','01-14&nbsp;A&nbsp;2','gCA$20230114A02');">
+                            01-14&nbsp;A&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.39&nbsp;</td>
+                    <td class="raceline">66&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>4</td>
+                    <td class="raceline" nowrap>-13.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.33&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>5.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>TE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Tired Badly, Stretch&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Walk The Moon&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>No Evidence&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bella Sunshine&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC65" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc66" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC66','vc66','01-12&nbsp;E&nbsp;1','gCA$20230112E01');">
+                            01-12&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.08&nbsp;</td>
+                    <td class="raceline">64&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>2</td>
+                    <td class="raceline" nowrap>-14&nbsp;</td>
+                    <td class="racelineb" nowrap>32.07&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>2.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Even Pace To Place&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Rico's Aries&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Slatex Kelce&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Milano&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC66" style="display:none;"></div>
+                    </td>
+                </tr>
+            </table> <span style="font-size:10px"><b>HEAD TO HEAD:</b></span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-21&dogname1=Ww Top Secret&dogname2=Bare Bones"
+                    target="gST$20930627A12Bare Bones"><b>#5</b> Ww Top Secret <b>Jan-21;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-16&dogname1=Bgr Atomicblonde&dogname2=Bare Bones"
+                    target="gST$20930627A12Bare Bones"><b>#7</b> Bgr Atomicblonde <b>Jan-16;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-14&dogname1=Gonz Milano&dogname2=Bare Bones"
+                    target="gST$20930627A12Bare Bones"><b>#3</b> Gonz Milano <b>Jan-14;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-12&dogname1=Gonz Milano&dogname2=Bare Bones"
+                    target="gST$20930627A12Bare Bones"><b>#3</b> Gonz Milano <b>Jan-12;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-10&dogname1=Gonz Milano&dogname2=Bare Bones"
+                    target="gST$20930627A12Bare Bones"><b>#3</b> Gonz Milano <b>Jan-10;</b></a>&nbsp; </span> <iframe
+                src="entries-comp-hth.jsp" width="840" height="30" name="gST$20930627A12Bare Bones"
+                id="gST$20930627A12Bare Bones" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div
+            style="margin-top:5px;margin-left:5px;padding:1px 1px 0 0;background-image: linear-gradient(to top, #F5F5F5 0%, #3B3535 900%);">
+            <img src="images/num-g7.png" alt="bet number 7"
+                style="border:1px solid black;width:24px;vertical-align: middle;" /> <span
+                style="width:200px;display:inline-block;"><b>Bgr Atomicblonde </b>&nbsp;</span> <span
+                style="width:20px;font-size:12px;color:#494949;">&nbsp;</span> <span
+                style="font-size:12px;color:#494949;">LA FIESTA</span> <span style="float:right; padding:0 15px;"> <a
+                    id="rl017" href="javascript:divSH('divRaceL017','rl017','Details','Bgr Atomicblonde');"
+                    style="font-size:12px;">Details&#9660;</a> </span> </div>
+        <hr>
+        <div class="divcontent" id="divRaceL017" name="Bgr Atomicblonde" style="display:hidden;">
+            <div style="margin:4px 1px 4px 0px;"> <span style="font-size:12px;line-height:18px;"> (56) Best Win: 32.19
+                    Starts: CA 8 0 0 0 1 &nbsp;&nbsp; Kennel: LA FIESTA Trainer: BOBBY MIR<br /> W.T.R. F, Jul 15,
+                    2018.&nbsp;&nbsp; Sire: BOC'S TONY ROMO&nbsp;&nbsp; Dam: BOC'S TOMBOY<br /> </span> </div>
+            <table class="race-res" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="racelinebg">Event</td>
+                    <td class="racelinebg">Trk</td>
+                    <td class="racelinebg">Dist</td>
+                    <td class="racelinebg">TC</td>
+                    <td class="racelinebg">Rtime</td>
+                    <td class="racelinebg">Wt</td>
+                    <td class="racelinebg" nowrap>PP&nbsp;</td>
+                    <td class="racelinebg" nowrap>B</td>
+                    <td class="racelinebg" nowrap>E</td>
+                    <td class="racelinebg" nowrap></td>
+                    <td class="racelinebg" nowrap>Str</td>
+                    <td class="racelinebg" nowrap>&nbsp;</td>
+                    <td class="racelinebg" nowrap>Fin</td>
+                    <td class="racelinebg" nowrap>-mar</td>
+                    <td class="racelinebg" nowrap>Time&nbsp;</td>
+                    <td class="racelinebg">Odds</td>
+                    <td class="racelinebg" nowrap>Grd</td>
+                    <td class="racelinebg" nowrap>Comment</td>
+                    <td class="racelinebg" colspan=3>Leaaders</td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc71" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC71','vc71','01-24&nbsp;E&nbsp;1','gCA$20230124E01');">
+                            01-24&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.83&nbsp;</td>
+                    <td class="raceline">57&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-11&nbsp;</td>
+                    <td class="racelineb" nowrap>32.61&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>23.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>No Real Menace, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Of All Time&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Rocky Rhonda&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Olivia&nbsp;(6)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC71" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc72" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC72','vc72','01-21&nbsp;E&nbsp;2','gCA$20230121E02');">
+                            01-21&nbsp;E&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.99&nbsp;</td>
+                    <td class="raceline">56&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-12&nbsp;</td>
+                    <td class="racelineb" nowrap>32.83&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>10.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>SE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not Prominent, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Manolo&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Mega Offset&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Milano&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC72" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc73" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC73','vc73','01-19&nbsp;E&nbsp;2','gCA$20230119E02');">
+                            01-19&nbsp;E&nbsp;2&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">32.22&nbsp;</td>
+                    <td class="raceline">55&nbsp;</td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="racelineb" nowrap>2&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>4&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>4</td>
+                    <td class="raceline" nowrap>-7.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.74&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>51.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Early Speed, Gave&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Mega Navarro&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Ansley&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Manolo&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC73" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc74" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC74','vc74','01-16&nbsp;E&nbsp;1','gCA$20230116E01');">
+                            01-16&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.23&nbsp;</td>
+                    <td class="raceline">55&nbsp;</td>
+                    <td class="racelineb" nowrap>5&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>7</td>
+                    <td class="raceline" nowrap>-20.5&nbsp;</td>
+                    <td class="racelineb" nowrap>32.65&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>10.20&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Not A Factor, Mdtk&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Kl's Gray&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Mustard&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bare Bones&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC74" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc75" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC75','vc75','01-14&nbsp;A&nbsp;1','gCA$20230114A01');">
+                            01-14&nbsp;A&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.84&nbsp;</td>
+                    <td class="raceline">55&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>1&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>7</td>
+                    <td class="raceline" nowrap>-55.5&nbsp;</td>
+                    <td class="racelineb" nowrap>35.71&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>4.50&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>E&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Fast Decline, Inside&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>LASTING APPEAL&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Gonz Mustard&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Kl's Gray&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC75" style="display:none;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td nowrap class="raceline"> <a id="vc76" style="font-size:12px;font-weight:bold;"
+                            href="javascript:resSH('resVC76','vc76','01-10&nbsp;E&nbsp;1','gCA$20230110E01');">
+                            01-10&nbsp;E&nbsp;1&#9660;</a> &nbsp;</td>
+                    <td class="racelineb">CA&nbsp;</td>
+                    <td class="raceline">546&nbsp;</td>
+                    <td class="raceline">F&nbsp;</td>
+                    <td class="racelineb">31.35&nbsp;</td>
+                    <td class="raceline">56&nbsp;</td>
+                    <td class="racelineb" nowrap>3&nbsp;</td>
+                    <td class="racelineb" nowrap>7&nbsp;</td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap></td>
+                    <td class="racelineb" nowrap>6&nbsp;</td>
+                    <td class="raceline" nowrap>&nbsp;</td>
+                    <td class="racelineb" nowrap align=right>6</td>
+                    <td class="raceline" nowrap>-32&nbsp;</td>
+                    <td class="racelineb" nowrap>33.58&nbsp;&nbsp;</td>
+                    <td class="raceline" nowrap align=right>17.10&nbsp;&nbsp;</td>
+                    <td class="racelineb" nowrap>SE&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Never A Threat, Ins&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Bgr Dumpthedude&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>LASTING APPEAL&nbsp;&nbsp;</td>
+                    <td class="racelines" nowrap>Yolo On Fire&nbsp;(7)</td>
+                </tr>
+                <tr>
+                    <td colspan=21 style="height:1px;background:none;">
+                        <div class="rescontent" id="resVC76" style="display:none;"></div>
+                    </td>
+                </tr>
+            </table> <span style="font-size:10px"><b>HEAD TO HEAD:</b></span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-24&dogname1=Rocky Rhonda&dogname2=Bgr Atomicblonde"
+                    target="gCA$20230124E01Bgr Atomicblonde"><b>#4</b> Rocky Rhonda <b>Jan-24;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-21&dogname1=Gonz Milano&dogname2=Bgr Atomicblonde"
+                    target="gCA$20230124E01Bgr Atomicblonde"><b>#3</b> Gonz Milano <b>Jan-21;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-19&dogname1=Gonz Milano&dogname2=Bgr Atomicblonde"
+                    target="gCA$20230124E01Bgr Atomicblonde"><b>#3</b> Gonz Milano <b>Jan-19;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-16&dogname1=Bare Bones&dogname2=Bgr Atomicblonde"
+                    target="gCA$20230124E01Bgr Atomicblonde"><b>#6</b> Bare Bones <b>Jan-16;</b></a>&nbsp; </span> <span
+                style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-07&dogname1=Gonz Milano&dogname2=Bgr Atomicblonde"
+                    target="gCA$20230124E01Bgr Atomicblonde"><b>#3</b> Gonz Milano <b>Jan-07;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-03&dogname1=Gonz Milano&dogname2=Bgr Atomicblonde"
+                    target="gCA$20230124E01Bgr Atomicblonde"><b>#3</b> Gonz Milano <b>Jan-03;</b></a>&nbsp; </span>
+            <span style="font-size:9px;white-space: nowrap;display:inline-block;"> <a
+                    href="entries-comp-hth.jsp?eventdate=2023-01-03&dogname1=Mega Newcombe&dogname2=Bgr Atomicblonde"
+                    target="gCA$20230124E01Bgr Atomicblonde"><b>#1</b> Mega Newcombe <b>Jan-03;</b></a>&nbsp; </span>
+            <iframe src="entries-comp-hth.jsp" width="840" height="30" name="gCA$20230124E01Bgr Atomicblonde"
+                id="gCA$20230124E01Bgr Atomicblonde" marginheight="0" marginwidth="0" frameborder="0"
+                scrolling="no"></iframe>
+        </div>
+        <div
+            style="margin-top:5px;margin-left:5px;padding:1px 1px 0 0;background-image: linear-gradient(to top, #F5F5F5 0%, #3B3535 900%);">
+            <img src="images/num-g8.png" alt="bet number 8"
+                style="border:1px solid black;width:24px;vertical-align: middle;" /> <span
+                style="width:200px;display:inline-block;"><b>NO GREYHOUND </b>&nbsp;</span> <span
+                style="width:20px;font-size:12px;color:#494949;">&nbsp;</span> <span
+                style="font-size:12px;color:#494949;"></span> <span style="float:right; padding:0 15px;"> <a id="rl018"
+                    href="javascript:divSH('divRaceL018','rl018','Details','NO GREYHOUND');"
+                    style="font-size:12px;">Details&#9660;</a> </span> </div>
+        <hr>
+        <div class="divcontent" id="divRaceL018" name="NO GREYHOUND" style="display:hidden;">
+            <div style="margin:4px 1px 4px 0px;"> <span style="font-size:12px;line-height:18px;"> () Best Win: Starts:
+                    &nbsp;&nbsp; Kennel: Trainer: <br /> , .&nbsp;&nbsp; Sire: &nbsp;&nbsp; Dam: <br /> </span> </div>
+            <table class="race-res" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="racelinebg">Event</td>
+                    <td class="racelinebg">Trk</td>
+                    <td class="racelinebg">Dist</td>
+                    <td class="racelinebg">TC</td>
+                    <td class="racelinebg">Rtime</td>
+                    <td class="racelinebg">Wt</td>
+                    <td class="racelinebg" nowrap>PP&nbsp;</td>
+                    <td class="racelinebg" nowrap>B</td>
+                    <td class="racelinebg" nowrap>E</td>
+                    <td class="racelinebg" nowrap></td>
+                    <td class="racelinebg" nowrap>Str</td>
+                    <td class="racelinebg" nowrap>&nbsp;</td>
+                    <td class="racelinebg" nowrap>Fin</td>
+                    <td class="racelinebg" nowrap>-mar</td>
+                    <td class="racelinebg" nowrap>Time&nbsp;</td>
+                    <td class="racelinebg">Odds</td>
+                    <td class="racelinebg" nowrap>Grd</td>
+                    <td class="racelinebg" nowrap>Comment</td>
+                    <td class="racelinebg" colspan=3>Leaaders</td>
+                </tr>
+            </table> <iframe src="entries-comp-hth.jsp" width="840" height="30" name="" id="" marginheight="0"
+                marginwidth="0" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <p>&nbsp;
+        <p>
+</body>
+
+</html>
